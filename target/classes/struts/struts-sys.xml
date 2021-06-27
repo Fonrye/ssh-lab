@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+        "http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+
+    <!--
+            package元素用于定义包配置，每个package元素定义了一个包配置
+            name：必填属性，用来指定包的名字。
+            extends：可选属性，用来指定该包继承其他包。继承其它包，可以继承其它包中的Action定义、拦截器定义等。
+            namespace：可选属性，用来指定该包的命名空间。默认的命名空间""
+            包下所有的Action处理的URL为"命名空间/Action名"(namespace/actionname)
+        -->
+    <!--    登录验证-->
+    <package name="sys" extends="struts-default" namespace="/sys">
+        <action name="user_*" class="accountAction" method="{1}">
+            <result name="default">/pages/success.jsp</result>
+            <result name="login">/pages/login.jsp</result>
+            <result name="admin" type="redirectAction">
+                <param name="namespace">/lab</param>
+                <param name="actionName">lab_list</param>
+            </result>
+            <result name="inspector" type="redirectAction">
+                <param name="namespace">/check</param>
+                <param name="actionName">check_list</param>
+            </result>
+            <result name="technician" type="redirect">
+                /pages/apply_save.jsp
+            </result>
+            <result name="error">/pages/error.jsp</result>
+        </action>
+    </package>
+
+
+</struts>

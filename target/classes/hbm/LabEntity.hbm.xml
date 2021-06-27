@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.fon.entity.LabEntity" table="lab" schema="finalterm">
+        <id name="labId" column="labID"/>
+        <property name="labName" column="lab_name"/>
+        <property name="computerNum" column="computer_num"/>
+        <property name="labTeacher" column="lab_teacher"/>
+        <property name="labTechnician" column="lab_technician"/>
+    </class>
+</hibernate-mapping>

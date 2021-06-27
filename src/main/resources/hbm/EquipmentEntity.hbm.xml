@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.fon.entity.EquipmentEntity" table="equipment" schema="finalterm">
+        <id name="equipment" column="equipment"/>
+        <property name="equipId" column="equipID"/>
+        <property name="equipName" column="equip_name"/>
+        <property name="equipType" column="equip_type"/>
+        <property name="equipBirth" column="equip_birth"/>
+        <property name="warrantyDate" column="warranty_date"/>
+        <property name="equipFactory" column="equip_factory"/>
+    </class>
+</hibernate-mapping>

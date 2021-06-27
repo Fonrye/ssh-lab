@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.fon.entity.ApplyEntity" table="apply" schema="finalterm">
+        <id name="applyId" column="applyID"/>
+        <property name="department" column="department"/>
+        <property name="equipName" column="equip_name"/>
+        <property name="equipLab" column="equip_lab"/>
+        <property name="equipId" column="equipID"/>
+        <property name="applyPerson" column="apply_person"/>
+        <property name="equipType" column="equip_type"/>
+        <property name="description" column="description"/>
+        <property name="reason" column="reason"/>
+    </class>
+</hibernate-mapping>
